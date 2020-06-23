@@ -23,4 +23,26 @@ public class DocenteNegociolmpl implements DocenteNegocio {
 	public ArrayList<Docente> listarDocentes(){
 		return (ArrayList<Docente>) docenteDao.mostrarDocentes();
 	}
+
+	
+	
+	
+	
+	@Override
+	public boolean insertar(Docente docente) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean editar(Docente docente) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean borrar(int id) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }

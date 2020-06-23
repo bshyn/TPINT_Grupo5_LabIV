@@ -10,7 +10,7 @@ import java.sql.CallableStatement;
 public class Conexion {		
 	private String host = "jdbc:mysql://localhost:3306/";
 	private String user = "root";
-	private String pass = "ROOT";
+	private String pass = "root";
 	private String dbName = "sdg_educativa???profileSQL=true&useSSL=false";
 	
 	protected Connection connection;

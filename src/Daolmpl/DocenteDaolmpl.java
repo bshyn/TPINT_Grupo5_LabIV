@@ -12,7 +12,7 @@ import Dao.DocenteDao;
 import Model.Docente;
 import Model.Persona;
 
-//me obliga a poner la clase DocenteNegociolmpl como abstract, pero no lo voy a hacer
+//me obliga a poner la clase DocenteNegociolmpl como abstract
 
 public class DocenteDaolmpl implements DocenteDao {
 	
@@ -69,6 +69,18 @@ public class DocenteDaolmpl implements DocenteDao {
 			cn.close();
 		}
 		return estado; 
+	}
+
+	@Override
+	public boolean delete(int id) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean update(Docente alumno) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }

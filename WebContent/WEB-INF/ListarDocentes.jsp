@@ -18,8 +18,8 @@
 		}
 	%>
 
-	<a href="Principal.jsp">Inicio</a>
-	<a href="ServletDocente?Param=listaDocentes">Listar docentes</a>
+<!-- 	<a href="Principal.jsp">Inicio</a> -->
+	<a href="ServletDocente?Param=list">Listar docentes</a>
 
 <br/><br/><br/>
 
@@ -35,13 +35,10 @@
 			<td><b>PROVINCIA</b></td>
 			<td><b>EMAIL</b></td>
 			<td><b>TELEFONO</b></td>
-			<td><b>ESTADO</b></td>
 		</tr>
-
 		<%
 			for (Docente d : listaD) {
 		%>
-
 		<tr>
 			<td><%=d.getLegajo()%></td>
 			<td><%=d.getDni()%></td>
@@ -53,15 +50,10 @@
 			<td><%=d.getProvincia()%></td>
 			<td><%=d.getEmail()%></td>
 			<td><%=d.getTelefono()%></td>
-			<td><%= d.isEstado() %></td>
 		</tr>
-
 		<%
 			}
 		%>
-
-
-
 	</table>
 
 </body>
