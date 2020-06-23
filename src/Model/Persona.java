@@ -1,6 +1,6 @@
 package Model;
 
-public abstract class Persona {
+public class Persona {
 	private int legajo;
 	private String dni;
 	private String nombre;

@@ -7,18 +7,18 @@ public class Docente extends Persona {
 	private boolean estado;
 	
 	public Docente () {
-		
 	}
 	
-	public Docente(String dni, String nombre, String apellido, String fechaNacimiento, String direccion,
-			String localidad, String provincia, String email, String telefono, boolean estado, int id, int legajo,
-			Login login, boolean estado2) {
-		super(dni, nombre, apellido, fechaNacimiento, direccion, localidad, provincia, email, telefono, estado);
+	
+	public Docente(int id, int legajo, Login login, boolean estado) {
+		super();
 		this.id = id;
 		this.legajo = legajo;
 		this.login = login;
-		this.estado = estado2;
+		this.estado = estado;
 	}
+
+
 
 	public int getId() {
 		return id;

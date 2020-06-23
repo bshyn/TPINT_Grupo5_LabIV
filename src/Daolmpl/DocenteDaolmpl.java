@@ -16,7 +16,7 @@ import Model.Persona;
 
 public class DocenteDaolmpl implements DocenteDao {
 	
-	private Conexion cn;
+	private Conexion cn;s
 	
 	public DocenteDaolmpl() {
 		
@@ -69,18 +69,6 @@ public class DocenteDaolmpl implements DocenteDao {
 			cn.close();
 		}
 		return estado; 
-	}
-
-	@Override
-	public boolean delete(int id) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean update(Docente alumno) {
-		// TODO Auto-generated method stub
-		return false;
 	}
 
 }
