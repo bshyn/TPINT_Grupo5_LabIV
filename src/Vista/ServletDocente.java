@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import Negocio.DocenteNegocio;
 import Negociolmpl.DocenteNegociolmpl;
 
-@WebServlet("/ServletDocente")
+@WebServlet(value = "/ServletDocente")
 public class ServletDocente extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -24,19 +24,19 @@ public class ServletDocente extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/ListarDocentes.jsp");
 		if(request.getParameter("Param")!=null) {
 			String opcion = request.getParameter("Param").toString();
 			switch (opcion) {
 				case "list": {
 					request.setAttribute("listaDocentes", docenteNegocio.listarDocentes());
-					RequestDispatcher dispatcher = request.getRequestDispatcher("ListarDocentes.jsp");
-					dispatcher.forward(request, response);
 					break;
 				}
 				default:
 					break;
 			}
 		}
+		dispatcher.forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -8,17 +8,17 @@ import java.sql.Statement;
 import java.sql.CallableStatement;
 
 public class Conexion {		
-	private String host = "jdbc:mysql://localhost:3306/";
-	private String user = "root";
-	private String pass = "root";
-	private String dbName = "sdg_educativa???profileSQL=true&useSSL=false";
+	private String host = "jdbc:sqlserver://localhost:1433;";
+	private String user = "user=java;";
+	private String pass = "password=java;";
+	private String dbName = "databaseName=TP;";
 	
 	protected Connection connection;
 	
 	public Connection Open() {
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
-		this.connection = DriverManager.getConnection(host+dbName, user, pass);
+			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+		this.connection = DriverManager.getConnection(host + dbName + user + pass);
 		}
 		catch(Exception e) {
 			e.printStackTrace();
