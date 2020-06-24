@@ -34,9 +34,9 @@ public class DocenteDaolmpl implements DocenteDao {
 				Docente docente = new Docente();
 				docente.setLegajo(rs.getInt("legajo"));
 				docente.setDni(rs.getString("dni"));
-				docente.setDni(rs.getString("nombre"));
-				docente.setDni(rs.getString("apellido"));
-				docente.setDni(rs.getString("email"));
+				docente.setNombre(rs.getString("nombre"));
+				docente.setApellido(rs.getString("apellido"));
+				docente.setEmail(rs.getString("email"));
 				
 				list.add(docente);
 			}
